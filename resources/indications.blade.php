@@ -25,3 +25,19 @@
 6. WEB.PHP --> change route('guest.welcome')
     + change all layouts.app into layouts.admin + 
     npm run dev for Bootstrap
+
+7. separate completly admin&guest parts with CSS and JS 
+  
+   A. resources->js: create 2 files: admin.js & front.js
+      resources->sass: create 2 folder ADmin(with style.scss inside) & front(with style.scss inside)
+   
+   B. WEBPAC.MIX.JS ----> will create 2 separate folders for each in public
+      mix.js('resources/js/admin.js', 'public/js')
+        .js('resources/js/front.js', 'public/js')
+        .sass('resources/sass/admin/style.scss', 'public/css/admin')
+        .sass('resources/sass/front/style.scss', 'public/css/front')
+        .options({
+          processCssUrl: false
+        });
+
+  ---> than: npm run dev + npm run watch
