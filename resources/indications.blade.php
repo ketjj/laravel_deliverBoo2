@@ -41,3 +41,10 @@
         });
 
   ---> than: npm run dev + npm run watch
+8. create Tables:
+
+   [php artisan make:migration create_name_table] or create model and migration together
+   php artisan make:model Model -m
+
+   in case of go back: php artisan migrate:refresh /fresh
+                       php artisan migrate:rollback 
