@@ -48,3 +48,38 @@
 
    in case of go back: php artisan migrate:refresh /fresh
                        php artisan migrate:rollback 
+9.  MANY TO MANY table relations -->create a pivot table 
+    A. while creating a pivot(bridge) table, like type_user(s,t,u,v,), names gonna be in alphabetical order
+      or it will generate an error.
+
+    B. u'd insert FK-s inside a table:
+
+    [ for TYPE]
+      $table->unsignedBigInteger('user_id');
+      $table->foreign('user_id')
+      ->references('id') ----->column of refer
+      ->on('users') ----->this column will be inside this table
+      ->onDelete('cascade'); ----> if i'll delete one of them, what will happen ('cascade') or ('set null')
+    
+      ----------------------------------------
+    [for USER]
+      $table->unsignedBigInteger('type_id');
+      $table->foreign('type_id')
+      ->references('id')
+      ->on('types')
+      ->onDelete('cascade');
+
+    C. u'd create a function/methods inside a refer Models with names of relations:
+
+     [for USER MODEL]
+
+     public function types(){
+      return $this->belongsToMany('App\Type');
+      }
+    ---------------------
+
+    [for TYPE MODEL]
+
+    public function users(){
+      return $this->belongsToMany('App\User');
+    }

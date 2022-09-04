@@ -28,6 +28,14 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+
+    //RELATIONS-------------with type(n:n)
+
+    public function types(){
+        return $this->belongsToMany('App\Type');
+    }
+
+
     /**
      * The attributes that should be cast to native types.
      *
