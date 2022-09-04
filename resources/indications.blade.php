@@ -14,4 +14,10 @@
   npm i 
 
 4. php artisan migrate ---> 4 auto migration of laravel tables
-   
+5. separate Admin & Guest pasrts: 
+  resources->views-> create 2 folders Admin and Guest
+
+  HOME.BLADE.PHP put into ADMIN folder
+  WELCOME.BLADE.PHP put into GUEST folder (get empty, than -> !)
+  
+  + rename LAYOUTS/APP.BLADE.PHP into ADMIN.BLADE
