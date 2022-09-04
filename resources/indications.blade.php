@@ -21,3 +21,7 @@
   WELCOME.BLADE.PHP put into GUEST folder (get empty, than -> !)
   
   + rename LAYOUTS/APP.BLADE.PHP into ADMIN.BLADE
+
+6. WEB.PHP --> change route('guest.welcome')
+    + change all layouts.app into layouts.admin + 
+    npm run dev for Bootstrap
