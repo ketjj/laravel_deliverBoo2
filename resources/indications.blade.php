@@ -12,4 +12,6 @@
 3. install npm:
 
   npm i 
+
+4. php artisan migrate ---> 4 auto migration of laravel tables
    
