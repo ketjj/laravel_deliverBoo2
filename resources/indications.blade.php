@@ -48,6 +48,7 @@
 
    in case of go back: php artisan migrate:refresh /fresh
                        php artisan migrate:rollback 
+
 9.  MANY TO MANY table relations -->create a pivot table 
     A. while creating a pivot(bridge) table, like type_user(s,t,u,v,), names gonna be in alphabetical order
       or it will generate an error.
@@ -83,3 +84,10 @@
     public function users(){
       return $this->belongsToMany('App\User');
     }
+10. ONE TO MANY ---> pass a FK from a table to another
+    user(1) & dishes(n)
+
+    php artisan make: migration update_name_table
+
+    A. Create and Pass a user_id(fk)into dishes table
+    B. down() eliminate passed Fk and than fk relation(mirroring A)
