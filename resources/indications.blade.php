@@ -91,3 +91,8 @@
 
     A. Create and Pass a user_id(fk)into dishes table
     B. down() eliminate passed Fk and than fk relation(mirroring A)
+
+11. pass an extra column into a pivot table 
+    with up() and down() 
+
+----------------------------- FINISH MIGRATIONS // PHP ARTISAN MIGRATE
