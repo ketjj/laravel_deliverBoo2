@@ -8,4 +8,8 @@
   DB_DATABASE=db_name
   DB_USERNAME=root
   DB_PASSWORD=root   
+
+3. install npm:
+
+  npm i 
    
